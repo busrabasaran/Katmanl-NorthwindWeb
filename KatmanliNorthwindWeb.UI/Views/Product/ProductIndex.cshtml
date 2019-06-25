@@ -1,0 +1,26 @@
+﻿@using KatmanliNorthwindWeb.Entity
+@model List<Products>
+
+@{
+    ViewBag.Title = "ProductIndex";
+}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Unit Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Products item in Model)
+        {
+            <tr>
+                <th scope="row">@item.ProductID</th>
+                <td>@item.ProductName</td>
+                <td>@item.UnitPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,31 @@
+﻿@using KatmanliNorthwindWeb.Entity
+@model List<Orders>
+
+
+@{
+    ViewBag.Title = "OrderIndex";
+}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Customer ID</th>
+            <th scope="col">Order Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Orders item in Model)
+        {
+        <tr>
+            <th scope="row">@item.OrderID</th>
+            <td>@item.OrderDate</td>
+            <td>@item.CustomerID</td>
+            <td>@item.ShipAddress</td>
+            <td><a href="~/Controller/Action/@item.OrderID"</td>
+            <td></td>
+        </tr>
+        }
+    </tbody>
+</table>

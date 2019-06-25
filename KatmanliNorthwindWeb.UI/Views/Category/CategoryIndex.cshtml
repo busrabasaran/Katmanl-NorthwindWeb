@@ -1,0 +1,28 @@
+﻿@using KatmanliNorthwindWeb.Entity
+@model List<Categories>
+
+@{
+    ViewBag.Title = "CategoryIndex";
+}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Picture</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Categories item in Model)
+        {
+            <tr>
+                <th scope="row">@item.CategoryID</th>
+                <td>@item.CategoryName</td>
+                <td>@item.Picture</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>

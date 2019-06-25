@@ -1,0 +1,18 @@
+﻿@model KatmanliNorthwindWeb.UI.Models.LoginModel
+@{
+    ViewBag.Title = "LoginIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+<br />
+<!--action,controller,formmethod-->
+
+@using (Html.BeginForm("LoginIndex","Login",FormMethod.Post))
+{
+    @Html.TextBoxFor(x => x.CustomerID,new {placeholder="Customer ID giriniz." })
+
+    <input type="submit" value="Login" class="btn btn-primary" />
+}
+
+
